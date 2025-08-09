@@ -396,7 +396,7 @@ td{
   margin-top: 20px;
   margin-bottom: 20px;
 }
-.name ,.role ,.email,.studentno{
+.name ,.role ,.email,.studentno ,.image{
   width:100%;
   display: flex;
   flex-direction: column;
@@ -421,9 +421,43 @@ td{
    color:#020817;
    padding:10px 10px 10px 10px;
 }
+.p-dropdown .p-dropdown-trigger{
+  width:none;
+}
+.p-dropdown{
+  display:flex;
+  align-items: center;
+  gap:40px;
+  padding-right:5px;
+}
+.p-dropdown .p-dropdown-clear-icon{
+  right:25px;
+  top:12px;
+}
 
 @media screen and (max-width:670px){
   .addusersmaincontent{
      grid-template-columns: repeat(1, minmax(0, 1fr));
   }
+}
+
+/* //questions page */
+.Questions{
+   width:100%;
+  height:100%;
+  overflow: auto;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* addquestions section */
+
+.addquestions{
+   width:100%;
+  height:100%;
+  overflow: auto;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }

@@ -16,6 +16,14 @@ function Header() {
       navigate("/users/new");
     }
   };
+  const handleSelectChange1 = (e) => {
+    if (e.target.value === "questions") {
+      navigate("/questions");
+    }
+    if (e.target.value === "add-question") {
+      navigate("/questions/new");
+    }
+  };
   return (
     <div className = "header">
       <div className="head">
@@ -42,10 +50,10 @@ function Header() {
         </div>
          <div className="dashboardhead">
             <ShoppingBag size="15px" color="#020817"/>
-        <select className = "questions">
-            <option>Questions</option>
-            <option>Questions</option>
-            <option>Add Questions</option>
+        <select className = "questions" onChange={handleSelectChange1}>
+            <option value="">Questions</option>
+            <option value="questions">Questions</option>
+            <option value="add-question">Add Questions</option>
         </select>
         </div>
          <div className="dashboardhead">
