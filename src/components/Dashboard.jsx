@@ -1,22 +1,12 @@
 import { Activity, Clock3, FileQuestionMark, PanelLeft, Plus, Sun, Trophy, User } from 'lucide-react'
-import React, { useState } from 'react'
+import Navbar from './Navbar'
+
 
 function Dashboard() {
-  const[search,setSearch]=useState("Search for anything..")
+  
   return (
     <div className = "dashboard">
-      <div className="adminnav">
-       <div className="headeradmin">
-          <PanelLeft/>
-          <span className="adminhead">Admin</span>
-       </div>
-        <input type="text"  className = "searchbar" value={search} onClick={()=>{setSearch("")}} onChange={(e)=>{setSearch(e.target.value)}}/>
-       
-       <div className="mode">
-          <Sun size="25px"/>
-       </div>
-
-      </div>
+      <Navbar/>
       <div className="maincontent">
         <div className="totalusers">
           <div className="headinglogo">

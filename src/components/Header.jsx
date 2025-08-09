@@ -5,6 +5,17 @@ import { useNavigate } from 'react-router'
 
 function Header() {
   const navigate = useNavigate();
+  
+
+
+   const handleSelectChange = (e) => {
+    if (e.target.value === "users") {
+      navigate("/users");
+    }
+    if (e.target.value === "add-user") {
+      navigate("/users/new");
+    }
+  };
   return (
     <div className = "header">
       <div className="head">
@@ -23,10 +34,10 @@ function Header() {
         </div>
         <div className="dashboardhead">
             <User size="15px" color="#020817"/>
-        <select className = "user">
-            <option>Users</option>
-            <option>Users</option>
-            <option>Add User</option>
+        <select className = "user" onChange={handleSelectChange}>
+            <option value="">Users</option>
+            <option value="users">Users</option>
+            <option value="add-user">Add User</option>
         </select>
         </div>
          <div className="dashboardhead">
