@@ -220,7 +220,7 @@ body.dark .datatable ,body.dark .p-dropdown {
  border:1px solid rgb(255, 255, 255,0.1);
  color:white;
 }
-body.dark .allmodes,body.dark .addusersbutton ,body.dark button{
+body.dark .allmodes,body.dark .addusersbutton ,body.dark button,body.dark addnew{
   background-color: white;
   border:1px solid rgb(255, 255, 255,0.1);
   color:#020817;

@@ -22,7 +22,7 @@ function Questions() {
             <h2>Questions (10)</h2>
             <span className = "manageusers">Manage  Questions (Server side table functionalities.)</span>
         </div>
-        <bitton className="addnew">+ Add new</bitton>
+        <button className="addnew">+ Add new</button>
       </div>
       <div className="card">
                   <div style={{ display: "flex", gap: "10px", marginBottom: "10px" }}>

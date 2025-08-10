@@ -46,9 +46,9 @@ function Header({id}) {
         <div className="dashboardhead">
             <User size="15px" color="#020817"/>
         <div className = "user" >
-          <div className="dropdownusers">
-           <span className = "userdivhead">Users</span>
-           <ChevronRight size ="15px" onClick={()=>{setUser(!user)}}/>
+          <div className="dropdownusers" onClick={()=>{setUser(!user)}}>
+           <span className = "userdivhead" >Users</span>
+           <ChevronRight size ="15px" />
            </div>
            {user && (
             <>
@@ -61,9 +61,9 @@ function Header({id}) {
          <div className="dashboardhead">
             <ShoppingBag size="15px" color="#020817"/>
          <div className = "user" >
-          <div className="dropdownusers">
-           <span className = "userdivhead">Questions</span>
-           <ChevronRight size ="15px" onClick={()=>{setquestion(!question)}}/>
+          <div className="dropdownusers" onClick={()=>{setquestion(!question)}}>
+           <span className = "userdivhead" >Questions</span>
+           <ChevronRight size ="15px" />
            </div>
            {question&& (
             <>
@@ -76,9 +76,9 @@ function Header({id}) {
          <div className="dashboardhead">
             <WalletCards size="15px" color="#020817"/>
         <div className = "user" >
-          <div className="dropdownusers">
-           <span className = "userdivhead">Quiz</span>
-           <ChevronRight size ="15px" onClick={()=>{setquiz(!quiz)}}/>
+          <div className="dropdownusers" onClick={()=>{setquiz(!quiz)}}>
+           <span className = "userdivhead" >Quiz</span>
+           <ChevronRight size ="15px" />
            </div>
            {quiz&& (
             <>

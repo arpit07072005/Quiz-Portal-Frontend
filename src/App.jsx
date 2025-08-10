@@ -1,12 +1,12 @@
 import './App.css'
 import { BrowserRouter as Router,Routes,Route } from 'react-router'
-import Header from './components/Header'
+
 import Dashboard from './components/Dashboard'
 import Users from './components/Users'
 import Addusers from './components/Addusers'
 import Questions from './components/Questions'
 import Addquestions from './components/Addquestions'
-import Leaderboard from './components/Leaderboard'
+
 import Login from './components/Login'
 
 
@@ -21,7 +21,6 @@ function App() {
             <Route path ="/users/new" element={<Addusers/>} />
             <Route path ="/questions" element={<Questions/>} />
             <Route path ="/question/new" element={<Addquestions/>} />
-            <Route path ="/leader" element={<Leaderboard/>} />
             <Route path ="/login" element={<Login/>} />
           </Routes>
         </Router>
