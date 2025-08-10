@@ -26,6 +26,18 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
    overflow: auto;
 }
+.header1{
+  width:256px;
+  height:auto;
+  position:absolute;
+  min-height: 100%;
+  display:flex;
+  flex-direction: column;
+  background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+   overflow: auto;
+}
 .dashboard{
   width: calc(100% - 256px);
   font-family: "Poppins", sans-serif;
@@ -86,22 +98,36 @@
 }
 .dashboardhead{
    font-family: "Poppins", sans-serif;
+   cursor: pointer;
    font-size:14px;
    font-weight: 500;
    gap:10px;
    display:flex;
-   align-items: center;
+   align-items: top;
 }
 .user ,.questions ,.quiz{
-  width:82%;
+  width:100%;
   border:none;
    font-family: "Poppins", sans-serif;
    font-size:14px;
    font-weight: 400;
-   padding-right:40px;
+   padding-right:20px;
    background-color: white;
-   color:#213547;
+   display:flex;
+   flex-direction: column;
+   gap:10px
+   
 }
+.dropdownusers{
+  width:100%;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  color:#020817;
+  font-weight: 500;
+}
+
 .overview{
    font-family: "Poppins", sans-serif;
    font-size:12px;
@@ -152,6 +178,74 @@ option{
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
      border-radius: 6px;
      padding:5px 8px 3px 8px;
+     position:relative
+}
+.allmodes{
+  position:absolute;
+  width:200px;
+  height:auto;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  gap:10px;
+  padding:10px;
+  background-color: white;
+  top:7vh;
+  right:0px;
+  border-radius: 8px;
+  border:1px solid rgba(0, 0, 0, 0.1);
+
+}
+body.dark{
+  background-color: #020817;
+  color:white;
+}
+body.dark input,
+body.dark td,
+body.dark th,
+body.dark h2,body.dark h3,
+body.dark div ,
+body.dark textarea {
+  background-color: #020817;
+  color: white;
+
+}
+body.dark .p-paginator .p-paginator-element {
+  background-color: #020817 !important;
+  color: #9CA3AF !important; /* arrow/icon color */
+  border: none; /* optional: remove border */
+  font-weight: 400;
+}
+
+body.dark .totalusers ,body.dark input,body.dark .totalusers1 ,body.dark .totalusers2 ,body.dark .mode ,body.dark td,
+body.dark .datatable ,body.dark .p-dropdown {
+ border:1px solid rgb(255, 255, 255,0.1);
+ color:white;
+}
+body.dark .allmodes,body.dark .addusersbutton ,body.dark button,body.dark addnew{
+  background-color: white;
+  border:1px solid rgb(255, 255, 255,0.1);
+  color:#020817;
+
+}
+body.dark th{
+  border-bottom:1px solid rgb(255, 255, 255,0.1);
+}
+body.dark .p-dropdown-panel .p-dropdown-items .p-dropdown-item:first-child,body.dark .p-dropdown-panel .p-dropdown-items .p-dropdown-item:last-child{
+  color:white;
+}
+body.dark .p-dropdown-panel .p-dropdown-items ,body.dark textarea{
+   border:1px solid rgb(255, 255, 255,0.1);
+}
+body.dark .header{
+   border-right:1px solid rgb(255, 255, 255,0.1);
+}
+body.dark .stats ,body.dark .society1 {
+  color:#9CA3AF;
+  font-weight: 500;
+} 
+body.dark svg{
+  stroke:white;
 }
 .maincontent{
   width:100%;
@@ -359,7 +453,12 @@ td{
 }
 
 /* //add users page */
-
+.addusersandheader{
+  display:flex;
+  flex-direction:row;
+  width:100%;
+  height:100%;
+}
 .Addusers{
   width:100%;
   height:100%;
@@ -434,7 +533,15 @@ td{
   right:25px;
   top:12px;
 }
-
+.addusersbutton{
+  background-color: #020817;
+    color: white;
+    width:100px;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 6px;
+}
 @media screen and (max-width:670px){
   .addusersmaincontent{
      grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -461,3 +568,5 @@ td{
   flex-direction: column;
   align-items: center;
 }
+
+

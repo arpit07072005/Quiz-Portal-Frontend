@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Navbar from './Navbar'
 import { Dropdown } from 'primereact/dropdown'
+import Header from './Header'
 
 function Addquestions() {
       const[name,setName]=useState()
@@ -9,15 +10,22 @@ function Addquestions() {
           const[options,setOptions]=useState()
           const[correct,setCorrect]=useState()
         const [category, setCategory] = useState(null);
+        const[sno,setSno]=useState()
         const categories = [
             
         ];
   return (
+    <div className="addusersandheader">
+      <Header/>
     <div className="addquestions">
       <Navbar/>
        <div className="addusersmain">
               <h3>Add New Question</h3>
               <div className="addusersmaincontent">
+                <div className="name">
+                      <label for ="S.no" className="name">S.No</label>
+                      <input type="text" placeholder="Enter Serial No." className="nameinput" value={sno} onChange={(e)=>{setSno(e.target.value)}}  onClick={()=>{setSno("")}}/>
+                  </div>
                   <div className="name">
                       <label for ="name" className="name">Name</label>
                       <input type="text" placeholder="Enter Name" className="nameinput" value={name} onChange={(e)=>{setName(e.target.value)}}  onClick={()=>{setName("")}}/>
@@ -45,10 +53,12 @@ function Addquestions() {
                        <label for ="email" className="name">Options</label>
                       <textarea type="text"  placeholder="Enter options" className="nameinput" value={options} onChange={(e)=>{setOptions(e.target.value)}}  onClick={()=>{setOptions("")}} />
                   </div>
+                  <button className = "addusersbutton">Submit</button>
                   
                   
               </div>
             </div>
+    </div>
     </div>
   )
 }
