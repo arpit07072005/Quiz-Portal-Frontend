@@ -24,6 +24,14 @@ function Header() {
       navigate("/questions/new");
     }
   };
+  const handlequiz=(e)=>{
+     if (e.target.value === "quiz") {
+      navigate("/quiz");
+    }
+    if (e.target.value === "addquiz") {
+      navigate("/quiz/new");
+    }
+  };
   return (
     <div className = "header">
       <div className="head">
@@ -58,10 +66,10 @@ function Header() {
         </div>
          <div className="dashboardhead">
             <WalletCards size="15px" color="#020817"/>
-        <select className = "quiz">
-            <option>Quiz</option>
-            <option>Quiz</option>
-            <option>Add Quiz</option>
+         <select className = "quiz" onChange={handlequiz}>
+            <option value=''>Quiz</option>
+            <option value='quiz'>Quiz</option>
+            <option value='addquiz'>Add Quiz</option>
         </select>
         </div>
         <div className="dashboardhead">
