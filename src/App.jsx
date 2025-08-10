@@ -7,6 +7,7 @@ import Addusers from './components/Addusers'
 import Questions from './components/Questions'
 import Addquestions from './components/Addquestions'
 import Leaderboard from './components/Leaderboard'
+import Login from './components/Login'
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path ="/questions" element={<Questions/>} />
             <Route path ="/question/new" element={<Addquestions/>} />
             <Route path ="/leader" element={<Leaderboard/>} />
+            <Route path ="/login" element={<Login/>} />
           </Routes>
         </Router>
       </div>
