@@ -1,11 +1,11 @@
-import { Activity, Clock3, FileQuestionMark, PanelLeft, Plus, Sun, Trophy, User } from 'lucide-react'
+import { Activity, Clock3, FileQuestionMark, Plus, Trophy, User } from 'lucide-react'
 import Navbar from './Navbar'
 
 
+
 function Dashboard() {
-  
   return (
-    <div className = "dashboard">
+    <div className = "dashboard" >
       <Navbar/>
       <div className="maincontent">
         <div className="totalusers">

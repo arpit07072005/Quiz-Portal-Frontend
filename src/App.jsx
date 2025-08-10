@@ -6,20 +6,21 @@ import Users from './components/Users'
 import Addusers from './components/Addusers'
 import Questions from './components/Questions'
 import Addquestions from './components/Addquestions'
+import Leaderboard from './components/Leaderboard'
 
 
 function App() {
-
   return (
       <div className = "App">
         <Router>
           <Header/>
           <Routes>
-            <Route path ="/" element={<Dashboard/>} />
+            <Route path ="/" element={<Dashboard />} />
             <Route path ="/users" element={<Users/>} />
             <Route path ="/users/new" element={<Addusers/>} />
             <Route path ="/questions" element={<Questions/>} />
-            <Route path ="/questions/new" element={<Addquestions/>} />
+            <Route path ="/question/new" element={<Addquestions/>} />
+            <Route path ="/leader" element={<Leaderboard/>} />
           </Routes>
         </Router>
       </div>

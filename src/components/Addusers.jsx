@@ -42,6 +42,7 @@ function Addusers() {
                   <label for ="studentno" className="name">Student no.</label>
                  <input type="text" placeholder="Enter student no." className="nameinput" value={studentno} onChange={(e)=>{setStudentno(e.target.value)}}  onClick={()=>{setStudentno("")}}/>
             </div>
+            <button className = "addusersbutton">Submit</button>
         </div>
       </div>
     </div>
