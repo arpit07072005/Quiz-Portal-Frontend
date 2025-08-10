@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Navbar from './Navbar'
 import { Dropdown } from 'primereact/dropdown';
+import Header from './Header';
 
 function Addusers() {
     const[name,setName]=useState()
@@ -13,6 +14,8 @@ function Addusers() {
     const[studentno,setStudentno]=useState()
 
   return (
+    <div className="addusersandheader">
+      <Header/>
     <div className="Addusers">
       <Navbar/>
       <div className="addusersmain">
@@ -45,6 +48,7 @@ function Addusers() {
             <button className = "addusersbutton">Submit</button>
         </div>
       </div>
+    </div>
     </div>
   )
 }

@@ -4,6 +4,7 @@ import { Dropdown } from 'primereact/dropdown';
 import { InputText } from 'primereact/inputtext';
 import { DataTable } from 'primereact/datatable';
 import { Column } from 'primereact/column';
+import Header from './Header';
 
 function Questions() {
     const [globalFilter, setGlobalFilter] = useState("");
@@ -12,6 +13,8 @@ function Questions() {
         
     ];
   return (
+    <div className="addusersandheader">
+        <Header/>
     <div className = "Questions">
       <Navbar/>
          <div className="usersmaincontent">
@@ -58,6 +61,7 @@ function Questions() {
                       <Column field="correct" header="Correct Answer"></Column>
                   </DataTable>
               </div>
+    </div>
     </div>
   )
 }

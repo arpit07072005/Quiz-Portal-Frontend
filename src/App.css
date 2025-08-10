@@ -216,7 +216,7 @@ body.dark .p-paginator .p-paginator-element {
 }
 
 body.dark .totalusers ,body.dark input,body.dark .totalusers1 ,body.dark .totalusers2 ,body.dark .mode ,body.dark td,
-body.dark .datatable ,body.dark .addnew ,body.dark .p-dropdown {
+body.dark .datatable ,body.dark .p-dropdown {
  border:1px solid rgb(255, 255, 255,0.1);
  color:white;
 }
@@ -451,7 +451,12 @@ td{
 }
 
 /* //add users page */
-
+.addusersandheader{
+  display:flex;
+  flex-direction:row;
+  width:100%;
+  height:100%;
+}
 .Addusers{
   width:100%;
   height:100%;
