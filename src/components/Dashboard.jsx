@@ -1,11 +1,14 @@
-import { Activity, Clock3, FileQuestionMark, PanelLeft, Plus, Sun, Trophy, User } from 'lucide-react'
+import { Activity, Clock3, FileQuestionMark, Plus, Trophy, User } from 'lucide-react'
 import Navbar from './Navbar'
+import Header from './Header'
+
 
 
 function Dashboard() {
-  
   return (
-    <div className = "dashboard">
+    <div className="addusersandheader">
+      <Header/>
+    <div className = "dashboard" >
       <Navbar/>
       <div className="maincontent">
         <div className="totalusers">
@@ -124,6 +127,7 @@ function Dashboard() {
         </div>
         
       </div>
+    </div>
     </div>
   )
 }

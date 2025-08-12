@@ -1,39 +1,34 @@
-import React from 'react'
-import {BrainCircuit, CircuitBoard, LayoutDashboard, ShoppingBag, User, WalletCards } from "lucide-react"
+import React, { useState } from 'react'
+import {BrainCircuit, ChevronRight, CircuitBoard, LayoutDashboard, ShoppingBag, User, WalletCards } from "lucide-react"
 import { useNavigate } from 'react-router'
 
 
-function Header() {
+function Header({id}) {
   const navigate = useNavigate();
+  const[user,setUser]=useState(false);
+  const[question,setquestion]=useState(false)
+  const[quiz,setquiz]=useState(false)
   
 
 
    const handleSelectChange = (e) => {
-    if (e.target.value === "users") {
+    if (e.target.className === "optionsusers") {
       navigate("/users");
     }
-    if (e.target.value === "add-user") {
+    if (e.target.className === "optionsaddusers") {
       navigate("/users/new");
     }
   };
   const handleSelectChange1 = (e) => {
-    if (e.target.value === "questions") {
+    if (e.target.className === "optionsquestions") {
       navigate("/questions");
     }
-    if (e.target.value === "add-question") {
-      navigate("/questions/new");
-    }
-  };
-  const handlequiz=(e)=>{
-     if (e.target.value === "quiz") {
-      navigate("/quiz");
-    }
-    if (e.target.value === "addquiz") {
-      navigate("/quiz/new");
+    if (e.target.className === "optionsaddquestions") {
+      navigate("/question/new");
     }
   };
   return (
-    <div className = "header">
+    <div className ={id==="responsive"?"header1": "header"}>
       <div className="head">
           <BrainCircuit size="15px"/>
           <div className="mlcoename">
@@ -50,27 +45,48 @@ function Header() {
         </div>
         <div className="dashboardhead">
             <User size="15px" color="#020817"/>
-        <select className = "user" onChange={handleSelectChange}>
-            <option value="">Users</option>
-            <option value="users">Users</option>
-            <option value="add-user">Add User</option>
-        </select>
+        <div className = "user" >
+          <div className="dropdownusers" onClick={()=>{setUser(!user)}}>
+           <span className = "userdivhead" >Users</span>
+           <ChevronRight size ="15px" />
+           </div>
+           {user && (
+            <>
+            <span className = "optionsusers" onClick={handleSelectChange}>Users</span>
+            <span className = "optionsaddusers" onClick={handleSelectChange}>Add Users</span>
+            </>
+           )}
+        </div>
         </div>
          <div className="dashboardhead">
             <ShoppingBag size="15px" color="#020817"/>
-        <select className = "questions" onChange={handleSelectChange1}>
-            <option value="">Questions</option>
-            <option value="questions">Questions</option>
-            <option value="add-question">Add Questions</option>
-        </select>
+         <div className = "user" >
+          <div className="dropdownusers" onClick={()=>{setquestion(!question)}}>
+           <span className = "userdivhead" >Questions</span>
+           <ChevronRight size ="15px" />
+           </div>
+           {question&& (
+            <>
+            <span className = "optionsquestions" onClick={handleSelectChange1}>Questions</span>
+            <span className = "optionsaddquestions" onClick={handleSelectChange1}>Add Questions</span>
+            </>
+           )}
+        </div>
         </div>
          <div className="dashboardhead">
             <WalletCards size="15px" color="#020817"/>
-         <select className = "quiz" onChange={handlequiz}>
-            <option value=''>Quiz</option>
-            <option value='quiz'>Quiz</option>
-            <option value='addquiz'>Add Quiz</option>
-        </select>
+        <div className = "user" >
+          <div className="dropdownusers" onClick={()=>{setquiz(!quiz)}}>
+           <span className = "userdivhead" >Quiz</span>
+           <ChevronRight size ="15px" />
+           </div>
+           {quiz&& (
+            <>
+            <span className = "optionsquiz" >Quiz</span>
+            <span className = "optionsaddquiz" >Add Quiz</span>
+            </>
+           )}
+        </div>
         </div>
         <div className="dashboardhead">
             <CircuitBoard size="15px" color="#020817"/>

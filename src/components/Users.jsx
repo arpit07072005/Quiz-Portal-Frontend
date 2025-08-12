@@ -7,6 +7,7 @@ import { Dropdown } from "primereact/dropdown";
 import "primereact/resources/themes/lara-light-indigo/theme.css";  // Theme
 import "primereact/resources/primereact.min.css"; // Core styles
 import "primeicons/primeicons.css"; // Icons
+import Header from './Header';
 
 function Users() {
     //  const [users, setUsers] = useState([]);
@@ -33,6 +34,8 @@ function Users() {
     //     ]);
     // }, []);
   return (
+    <div className="addusersandheader">
+        <Header/>
     <div className="users">
       <Navbar/>
       <div className="usersmaincontent">
@@ -40,7 +43,7 @@ function Users() {
             <h2>Users 0</h2>
             <span className = "manageusers">Manage Users (Server side table functionalities.)</span>
         </div>
-        <bitton className="addnew">+ Add new</bitton>
+        <button className="addnew">+ Add new</button>
       </div>
        <div className="card">
             <div style={{ display: "flex", gap: "10px", marginBottom: "10px" }}>
@@ -78,6 +81,7 @@ function Users() {
                 <Column field="joined" header="Joined"></Column>
             </DataTable>
         </div>
+    </div>
     </div>
   )
 }
